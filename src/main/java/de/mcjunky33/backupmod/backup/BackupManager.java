@@ -239,7 +239,7 @@ public class BackupManager {
                 writeLog(savedMsg);
                 System.out.println(savedMsg);
 
-                // <<< HIER: MaxBackup-Limit prüfen und ggf. alte löschen!
+                // <<< HERE: Check the MaxBackup limit and delete old backups if necessary!
                 deleteOldBackupsIfNeeded();
 
             } catch (Exception e) {
@@ -265,7 +265,7 @@ public class BackupManager {
         }
     }
 
-    // *** GEÄNDERT: normallogEnabled berücksichtigt! ***
+    // *** CHANGED: normallogEnabled is now taken into account! ***
     private static void broadcastAllPlayers(MinecraftServer server, String msg, ChatFormatting color) {
         if (server == null) return;
         for (ServerPlayer player : server.getPlayerList().getPlayers()) {

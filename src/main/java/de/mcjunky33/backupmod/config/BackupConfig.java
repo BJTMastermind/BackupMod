@@ -18,7 +18,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 
 public class BackupConfig {
-    public static String lang = "en_us"; // Default ist jetzt en_us!
+    public static String lang = "en_us"; // The default setting is now en_us!
     public static List<String> excludePaths = new ArrayList<>();
     public static int maxBackups = Integer.MAX_VALUE;
     public static int autoBackupTimes = 0;

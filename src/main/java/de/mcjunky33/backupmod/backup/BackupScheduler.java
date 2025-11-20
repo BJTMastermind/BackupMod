@@ -25,9 +25,9 @@ public class BackupScheduler {
     private static LocalDateTime lastBackupTime = null;
     private static double lastIntervalSeconds = 36.0 * 60;
 
-    // Timer-Status: wird regelmäßig gespeichert!
-    private static long secondsRemaining = -1; // -1 = nicht gesetzt
-    private static int tickCounter = 0; // Ticks seit dem letzten Timer-Update
+    // Timer Status: being saved regularly!
+    private static long secondsRemaining = -1; // -1 = not set
+    private static int tickCounter = 0; // Ticks since the last timer update
 
     private static void saveScheduleState() {
         File file = new File(SCHEDULE_FILE);
@@ -38,7 +38,7 @@ public class BackupScheduler {
             writer.write("lastIntervalSeconds: " + lastIntervalSeconds + "\n");
             writer.write("secondsRemaining: " + secondsRemaining + "\n");
         } catch (Exception e) {
-            // Keine weitere Notification
+            // No further notification
         }
     }
 
@@ -76,7 +76,7 @@ public class BackupScheduler {
             lastIntervalSeconds = liSeconds;
             secondsRemaining = secRem;
         } catch (Exception e) {
-            // Keine weitere Notification
+            // No further notification
         }
     }
 
@@ -131,7 +131,7 @@ public class BackupScheduler {
             long seconds = secondsRem % 60;
             return String.format("%02dh %02dmin %02dsec", hours, minutes, seconds);
         } else {
-            // Falls -1, dann Intervall neu setzen (nur beim allerersten Start)
+            // If -1, then reset the interval (only on the very first start)
             int timesPerDay = Math.max(BackupConfig.autoBackupTimes, 1);
             double intervalSeconds = 1440.0 * 60 / timesPerDay;
             long secondsRem = (long) intervalSeconds;
@@ -142,13 +142,13 @@ public class BackupScheduler {
         }
     }
 
-    // Jede echte Sekunde (=20 Ticks) wird der Timer runtergezählt und gespeichert!
+    // The timer is counted down and saved every real second (=20 ticks)!
     public static void checkAndRunBackup(MinecraftServer server) {
         loadScheduleState();
         int timesPerDay = Math.max(BackupConfig.autoBackupTimes, 1);
         lastIntervalSeconds = 1440.0 * 60 / timesPerDay;
 
-        // Nur beim allerersten Start setzt secondsRemaining das Intervall!
+        // Only on the very first start does secondsRemaining set the interval!
         if (secondsRemaining < 0) {
             secondsRemaining = (long) lastIntervalSeconds;
             saveScheduleState();
@@ -157,7 +157,7 @@ public class BackupScheduler {
         boolean doBackup = false;
         tickCounter++;
 
-        // Zähle Timer nur jede echte Sekunde runter (20 Ticks = 1 Sekunde)
+        // The timer only counts down every real second (20 ticks = 1 second).
         if (tickCounter >= 20) {
             tickCounter = 0;
             if (secondsRemaining > 0) {

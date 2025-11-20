@@ -32,11 +32,11 @@ public class RestoreManager {
     }
 
     public static boolean restoreBackup(String backupFileName, MinecraftServer server) {
-        // Anfang: Prüfen, ob Datei vorhanden
+        // Start: Check if file exists
         File backupFile = new File("backups/" + backupFileName);
 
         if (!backupFile.exists()) {
-            // Log-Ausgabe für berechtigte Spieler/OP
+            // Log output for authorized players/OPs
             for (ServerPlayer player : server.getPlayerList().getPlayers()) {
                 boolean isOp = player.hasPermissions(2);
                 boolean isPerm = BackupConfig.hasBackupPerm(player.getUUID().toString(), player.getName().getString());
@@ -48,7 +48,7 @@ public class RestoreManager {
             return false;
         }
 
-        // Rest wie gehabt
+        // The rest remains the same.
         logToPlayers(server, LangManager.tr("backup.restore_requested", backupFileName), false, 0);
 
         String timestamp = backupFileName.replace(".zip", "");
@@ -102,7 +102,7 @@ public class RestoreManager {
                 }
             }
 
-            // 2. Lösche nur, was im ZIP ist!
+            // 2. Only delete what's inside the ZIP file!
             for (String dirName : dirsToDelete) {
                 File dir = new File(dirName);
                 if (dir.exists()) {
@@ -166,7 +166,7 @@ public class RestoreManager {
             setAutosave(server, wasAutoSaveEnabled);
             logRestore.accept("Autosave restored to previous value.");
 
-            // Server-Neustart NUR wenn Restore erfolgreich!
+            // Restart the server ONLY if the restore is successful!
             if (startSh.exists() && startSh.isFile()) {
                 logRestore.accept("Restore finished. Server will now shut down and start.sh will be executed!");
                 if (finalLogWriter != null) finalLogWriter.close();
@@ -175,7 +175,7 @@ public class RestoreManager {
                 } catch (Exception e) {
                     logRestore.accept("Could not execute start.sh: " + e.getMessage());
                 }
-                // KEIN System.exit bei Fehler!
+                // Do NOT use System.exit in case of an error!
             } else if (startBat.exists() && startBat.isFile()) {
                 logRestore.accept("Restore finished. Server will now shut down and start.bat will be executed!");
                 if (finalLogWriter != null) finalLogWriter.close();
@@ -184,11 +184,11 @@ public class RestoreManager {
                 } catch (Exception e) {
                     logRestore.accept("Could not execute start.bat: " + e.getMessage());
                 }
-                // KEIN System.exit bei Fehler!
+                // Do NOT use System.exit in case of an error!
             } else {
                 logRestore.accept("Start Script Linux start.sh or Windows start.bat were not found. Server is shutting down without restart. Please restart the server manually.");
                 if (finalLogWriter != null) finalLogWriter.close();
-                // KEIN System.exit bei Fehler!
+                // Do NOT use System.exit in case of an error!
             }
 
             return true;
@@ -198,7 +198,7 @@ public class RestoreManager {
             if (finalLogWriter != null) {
                 try { finalLogWriter.close(); } catch (IOException ignore) {}
             }
-            // KEIN System.exit bei Fehler!
+            // Do NOT use System.exit in case of an error!
             return false;
         }
     }

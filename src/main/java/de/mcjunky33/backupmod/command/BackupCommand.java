@@ -71,7 +71,7 @@ public class BackupCommand {
                                         return 1;
                                     })
                             )
-                            // Permission-Check für create
+                            // Permission-Check for create
                             .then(literal("create")
                                     .executes(ctx -> {
                                         if (!hasPerm(ctx.getSource())) {
@@ -546,7 +546,7 @@ public class BackupCommand {
                                             }))
                                     )
                             )
-                            // DEBUG/TEST-TIMER - nur noch die Variante mit Stunden, Minuten, Sekunden!
+                            // DEBUG/TEST-TIMER - only the version with hours, minutes, and seconds remains!
                             .then(literal("debug")
                                     .requires(source -> source.hasPermission(4) || hasPerm(source))
                                     .then(literal("set.timer.value")
@@ -572,7 +572,7 @@ public class BackupCommand {
                                             )
                                     )
                                     .then(literal("set.autobackup.value")
-                                            .then(argument("times", IntegerArgumentType.integer(1, 1440)) // <- Debug: bis 80 erlaubt!
+                                            .then(argument("times", IntegerArgumentType.integer(1, 1440)) // <- Debug: up to 80 allowed!
                                                     .executes(ctx -> {
                                                         if (!hasPerm(ctx.getSource())) {
                                                             ctx.getSource().sendFailure(Component.literal(LangManager.tr("error.permission")));
