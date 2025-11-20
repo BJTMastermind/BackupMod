@@ -1,18 +1,23 @@
 package de.mcjunky33.backupmod.backup;
 
-import de.mcjunky33.backupmod.lang.LangManager;
-import de.mcjunky33.backupmod.BackupMod;
-import de.mcjunky33.backupmod.config.BackupConfig;
-
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-
-import java.io.*;
-import java.util.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.function.Consumer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import java.util.function.Consumer;
+
+import de.mcjunky33.backupmod.BackupMod;
+import de.mcjunky33.backupmod.config.BackupConfig;
+import de.mcjunky33.backupmod.lang.LangManager;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class RestoreManager {
 

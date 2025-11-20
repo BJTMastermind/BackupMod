@@ -5,10 +5,11 @@
   "name": "BackupMod",
   "description": "BackupMod is a powerful Minecraft server mod for easy, automatic, and manual backups, with permission management, auto-deletion, and more.",
   "authors": [
-    "Me!"
+    "BJTMastermind",
+    "Mcjunky33 (Upstream Maintainer)"
   ],
   "contact": {
-    "sources": "https://github.com/Mcjunky33/BackupMod"
+    "sources": "https://github.com/BJTMastermind/BackupMod"
   },
   "license": "MIT",
   "icon": "assets/backupmod/icon.png",
@@ -18,12 +19,10 @@
       "de.mcjunky33.backupmod.BackupMod"
     ]
   },
-  "mixins": [
-    "backupmod.mixins.json"
-  ],
+  "mixins": [],
   "depends": {
-    "fabricloader": ">=0.17.2",
-    "minecraft": "~1.21.8",
+    "fabricloader": ">=0.17.3",
+    "minecraft": "~1.21.9",
     "java": ">=21",
     "fabric-api": "*"
   },

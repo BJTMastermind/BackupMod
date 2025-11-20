@@ -1,28 +1,28 @@
 package de.mcjunky33.backupmod.command;
 
+import static net.minecraft.commands.Commands.argument;
+import static net.minecraft.commands.Commands.literal;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
 
-import de.mcjunky33.backupmod.lang.LangManager;
 import de.mcjunky33.backupmod.backup.BackupManager;
+import de.mcjunky33.backupmod.backup.BackupRenameManager;
 import de.mcjunky33.backupmod.backup.BackupScheduler;
+import de.mcjunky33.backupmod.backup.BackupUploadManager;
 import de.mcjunky33.backupmod.backup.RestoreManager;
 import de.mcjunky33.backupmod.config.BackupConfig;
-import de.mcjunky33.backupmod.backup.BackupUploadManager;
-import de.mcjunky33.backupmod.backup.BackupRenameManager;
-
-import java.util.List;
-import java.util.ArrayList;
-import java.io.File;
-
-import static net.minecraft.commands.Commands.literal;
-import static net.minecraft.commands.Commands.argument;
+import de.mcjunky33.backupmod.lang.LangManager;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.minecraft.ChatFormatting;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 
 public class BackupCommand {
     private static final SuggestionProvider<CommandSourceStack> SUGGESTION_AUTO = (ctx, builder) -> {

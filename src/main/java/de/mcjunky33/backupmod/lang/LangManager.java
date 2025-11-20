@@ -1,10 +1,11 @@
 package de.mcjunky33.backupmod.lang;
 
-import com.google.gson.Gson;
-import java.util.Map;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Map;
+
+import com.google.gson.Gson;
 
 public class LangManager {
     private static Map<String, String> translations = new HashMap<>();

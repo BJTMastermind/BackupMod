@@ -1,20 +1,36 @@
 package de.mcjunky33.backupmod.backup;
 
-import de.mcjunky33.backupmod.config.BackupConfig;
-import de.mcjunky33.backupmod.BackupMod;
-import de.mcjunky33.backupmod.lang.LangManager;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.nio.file.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+
+import de.mcjunky33.backupmod.BackupMod;
+import de.mcjunky33.backupmod.config.BackupConfig;
+import de.mcjunky33.backupmod.lang.LangManager;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerPlayer;
 
 public class BackupManager {
     private static final String BACKUP_DIR = BackupMod.BACKUP_DIR;

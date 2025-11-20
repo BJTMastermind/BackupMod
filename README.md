@@ -6,11 +6,9 @@ BackupMod is a powerful Minecraft server mod for easy, automatic, and manual bac
 
 ## Download
 
-- **[Modrinth](https://modrinth.com/mod/backup-mod)**
-- **[CurseForge](https://curseforge.com/minecraft/mc-mods/backup-manager-by-mcjunky33)**
-
-## Changelog
-- **[Github](https://github.com/Mcjunky33/BackupMod/blob/main/CHANGELOGver0.2.md)**
+- **[Releases](https://github.com/BJTMastermind/BackupMod)**
+<!-- - **[Modrinth](https://modrinth.com/mod/backup-mod)** -->
+<!-- - **[CurseForge](https://curseforge.com/minecraft/mc-mods/backup-manager-by-mcjunky33)** -->
 
 ---
 
@@ -21,7 +19,7 @@ BackupMod is a powerful Minecraft server mod for easy, automatic, and manual bac
 - **Create and restore backups** with simple commands
 - **Automatic scheduled backups** (configurable per day)
 - **Backup limit & auto-delete** of oldest files
-- **Upload ZIP from URL (Upload Zip via direct download link. tip google drive doesn't work.)** 
+- **Upload ZIP from URL (Upload Zip via direct download link. tip google drive doesn't work.)**
 - **Rename backups**
 - **Exclude/include folders/files** from backups
 - **Language change command en_us, en_gb, de_de, it_it, fr_fr, es_es, pl_pl, more comming soon**
@@ -32,7 +30,7 @@ BackupMod is a powerful Minecraft server mod for easy, automatic, and manual bac
 
 ### Installation
 
-1. Download the mod (`backupmod-0.2-1.21.8.jar`)
+1. Download the mod (`backupmod-0.3.0-1.21.9.jar`)
 2. Place it in your server’s `mods` folder
 3. Start the server – done!
 
@@ -40,7 +38,7 @@ BackupMod is a powerful Minecraft server mod for easy, automatic, and manual bac
 
 ### Commands & Usage
 
-All commands start with `/backup ...`  
+All commands start with `/backup ...`
 **Only OPs or users with permission can use these commands.**
 
 | Command                                  | Description                                                         |
@@ -119,12 +117,12 @@ All commands start with `/backup ...`
 
 ### Reporting Issues & Support
 
-**Please report issues, bugs or feature requests on Modrinth or CurseForge!**  
+**Please report issues, bugs or feature requests on Modrinth or CurseForge!**
 Do not use GitHub issues for bug reports.
 
 ---
 
-**Enjoy and keep your worlds safe!**  
+**Enjoy and keep your worlds safe!**
 _Made with ♥ by Mcjunky33_
 
 ---
@@ -138,7 +136,7 @@ _Made with ♥ by Mcjunky33_
 - **Backups erstellen und wiederherstellen** per Command
 - **Automatische Backups** (mehrmals am Tag möglich)
 - **Backup-Limit & automatisches Löschen** der ältesten Sicherungen
-- **ZIP per URL herunterladen (upload via directdownload link. tipp google drive funktioniert nicht.)** 
+- **ZIP per URL herunterladen (upload via directdownload link. tipp google drive funktioniert nicht.)**
 - **Umbenennen von Backups**
 - **Dateien/Ordner ausschließen/inkludieren**
 - **Sprache umschaltbar en_us, en_gb, de_de, it_it, fr_fr, es_es, pl_pl, more comming soon**
@@ -149,7 +147,7 @@ _Made with ♥ by Mcjunky33_
 
 ### Installation
 
-1. Mod herunterladen (`backupmod-0.2-1.21.8.jar`)
+1. Mod herunterladen (`backupmod-0.3.0-1.21.9.jar`)
 2. In den `mods`-Ordner des Servers kopieren
 3. Server starten – fertig!
 
@@ -157,7 +155,7 @@ _Made with ♥ by Mcjunky33_
 
 ### Kommandos & Erklärung
 
-Alle Befehle starten mit `/backup ...`  
+Alle Befehle starten mit `/backup ...`
 **Nur OPs oder berechtigte Spieler dürfen die Kommandos nutzen!**
 
 | Kommando                               | Erklärung                                                          |
@@ -236,10 +234,10 @@ Alle Befehle starten mit `/backup ...`
 
 ### Probleme & Support
 
-**Bitte Fehler, Bugs oder Wünsche auf Modrinth oder CurseForge melden!**  
+**Bitte Fehler, Bugs oder Wünsche auf Modrinth oder CurseForge melden!**
 **Nicht GitHub-Issues für Bugreports verwenden.**
 
 ---
 
-**Viel Spaß & sichere Welten!**  
+**Viel Spaß & sichere Welten!**
 _Made with ♥ von Mcjunky33_
