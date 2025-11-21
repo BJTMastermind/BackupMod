@@ -1,32 +1,32 @@
 {
-  "schemaVersion": 1,
-  "id": "backupmod",
-  "version": "${version}",
-  "name": "BackupMod",
-  "description": "BackupMod is a powerful Minecraft server mod for easy, automatic, and manual backups, with permission management, auto-deletion, and more.",
-  "authors": [
-    "BJTMastermind",
-    "Mcjunky33 (Upstream Maintainer)"
-  ],
-  "contact": {
-    "sources": "https://github.com/BJTMastermind/BackupMod"
-  },
-  "license": "MIT",
-  "icon": "assets/backupmod/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "de.mcjunky33.backupmod.BackupMod"
-    ]
-  },
-  "mixins": [],
-  "depends": {
-    "fabricloader": ">=0.17.3",
-    "minecraft": "~1.21.9",
-    "java": ">=21",
-    "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+    "schemaVersion": 1,
+    "id": "backupmod",
+    "version": "${version}",
+    "name": "BackupMod",
+    "description": "BackupMod is a powerful Minecraft server mod for easy, automatic, and manual backups, auto-deletion, and more.",
+    "authors": [
+        "BJTMastermind",
+        "Mcjunky33 (Upstream Maintainer)"
+    ],
+    "contact": {
+        "sources": "https://github.com/BJTMastermind/BackupMod"
+    },
+    "license": "MIT",
+    "icon": "assets/backupmod/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "me.bjtmastermind.backupmod.BackupMod"
+        ]
+    },
+    "mixins": [],
+    "depends": {
+        "fabricloader": ">=0.17.3",
+        "minecraft": "~1.21.9",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }

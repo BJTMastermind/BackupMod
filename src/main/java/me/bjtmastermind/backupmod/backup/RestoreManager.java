@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod.backup;
+package me.bjtmastermind.backupmod.backup;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -12,9 +12,9 @@ import java.util.function.Consumer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import de.mcjunky33.backupmod.BackupMod;
-import de.mcjunky33.backupmod.config.BackupConfig;
-import de.mcjunky33.backupmod.lang.LangManager;
+import me.bjtmastermind.backupmod.BackupMod;
+import me.bjtmastermind.backupmod.config.BackupConfig;
+import me.bjtmastermind.backupmod.lang.LangManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;

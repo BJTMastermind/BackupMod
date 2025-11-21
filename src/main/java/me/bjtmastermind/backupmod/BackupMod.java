@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod;
+package me.bjtmastermind.backupmod;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -6,10 +6,10 @@ import java.io.FileWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.mcjunky33.backupmod.backup.BackupScheduler;
-import de.mcjunky33.backupmod.command.BackupCommand;
-import de.mcjunky33.backupmod.config.BackupConfig;
-import de.mcjunky33.backupmod.lang.LangManager;
+import me.bjtmastermind.backupmod.backup.BackupScheduler;
+import me.bjtmastermind.backupmod.command.BackupCommand;
+import me.bjtmastermind.backupmod.config.BackupConfig;
+import me.bjtmastermind.backupmod.lang.LangManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.MinecraftServer;

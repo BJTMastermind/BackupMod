@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod.backup;
+package me.bjtmastermind.backupmod.backup;
 
 import java.io.File;
 

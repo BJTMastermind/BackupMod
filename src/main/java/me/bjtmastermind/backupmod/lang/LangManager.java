@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod.lang;
+package me.bjtmastermind.backupmod.lang;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -22,7 +22,7 @@ public class LangManager {
                 fallbackTranslations = new HashMap<>();
             }
 
-            String lang = de.mcjunky33.backupmod.config.BackupConfig.lang;
+            String lang = me.bjtmastermind.backupmod.config.BackupConfig.lang;
             String file = "/assets/backupmod/lang/" + lang + ".json";
             InputStream stream = LangManager.class.getResourceAsStream(file);
             if (stream != null) {

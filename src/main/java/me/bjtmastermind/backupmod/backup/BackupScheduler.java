@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod.backup;
+package me.bjtmastermind.backupmod.backup;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.mcjunky33.backupmod.config.BackupConfig;
+import me.bjtmastermind.backupmod.config.BackupConfig;
 import net.minecraft.server.MinecraftServer;
 
 public class BackupScheduler {

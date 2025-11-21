@@ -1,4 +1,4 @@
-package de.mcjunky33.backupmod.command;
+package me.bjtmastermind.backupmod.command;
 
 import static net.minecraft.commands.Commands.argument;
 import static net.minecraft.commands.Commands.literal;
@@ -11,13 +11,13 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
 
-import de.mcjunky33.backupmod.backup.BackupManager;
-import de.mcjunky33.backupmod.backup.BackupRenameManager;
-import de.mcjunky33.backupmod.backup.BackupScheduler;
-import de.mcjunky33.backupmod.backup.BackupUploadManager;
-import de.mcjunky33.backupmod.backup.RestoreManager;
-import de.mcjunky33.backupmod.config.BackupConfig;
-import de.mcjunky33.backupmod.lang.LangManager;
+import me.bjtmastermind.backupmod.backup.BackupManager;
+import me.bjtmastermind.backupmod.backup.BackupRenameManager;
+import me.bjtmastermind.backupmod.backup.BackupScheduler;
+import me.bjtmastermind.backupmod.backup.BackupUploadManager;
+import me.bjtmastermind.backupmod.backup.RestoreManager;
+import me.bjtmastermind.backupmod.config.BackupConfig;
+import me.bjtmastermind.backupmod.lang.LangManager;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
